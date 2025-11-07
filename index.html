@@ -34,6 +34,8 @@
     img{max-width:100%;display:block;border-radius:1rem;border:1px solid rgba(148,163,184,.18)}
     figcaption{color:var(--muted);font-size:.95rem;margin-top:.5rem}
     footer{color:var(--muted);text-align:center;padding:2rem 0}
+    footer a{color:var(--brand);text-decoration:none;font-weight:600}
+    footer a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
@@ -57,7 +59,7 @@
     <section id="video" class="panel">
       <h2>Video</h2>
       <div class="video">
-        <video controls>
+        <video controls autoplay loop muted>
           <source src="assets/video_camls_agile.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -72,11 +74,11 @@
     <section id="methods" class="panel">
       <h2>Methods</h2>
       <figure>
-        <img src="methods.png" alt="Overview of the online kinodynamic motion planner, estimator, and quadrotor INDI controllers for cooperative cable-suspended manipulation." />
+        <img src="assets/methods.png" alt="Overview of the online kinodynamic motion planner, estimator, and quadrotor INDI controllers for cooperative cable-suspended manipulation." />
         <figcaption>System overview of the proposed trajectory-based framework for agile cooperative aerial manipulation.</figcaption>
       </figure>
       <div class="video">
-        <video controls>
+        <video controls autoplay loop muted>
           <source src="assets/methods_video.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -85,11 +87,8 @@
     </section>
 
     <footer>
-      <small>© <span id="year"></span> Sihao Sun. All rights reserved.</small>
+      <small>© 2025 <a href="https://sihaosun.github.io/" target="_blank" rel="noopener noreferrer">Sihao Sun</a>. All rights reserved.</small>
     </footer>
   </main>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
