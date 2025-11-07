@@ -9,26 +9,28 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📄</text></svg>">
   <style>
     :root{
-      --bg: #ffffff;       /* light background */
-      --panel:#f8fafc;     /* card color */
-      --text:#0f172a;      /* main text */
-      --muted:#475569;     /* secondary text */
-      --brand:#0ea5e9;     /* accent */
+      --bg: #ffffff;
+      --panel:#f8fafc;
+      --text:#0f172a;
+      --muted:#475569;
+      --brand:#0ea5e9;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;background:var(--bg);color:var(--text)}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--text)}
     .container{max-width:900px;margin-inline:auto;padding:2rem 1rem}
-    .title{font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.1;margin:0 0 .5rem;font-weight:800}
-    .authors{margin:0 0 1.5rem;color:var(--muted);font-size:clamp(1rem,2.5vw,1.1rem)}
+    .title{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:800;margin:0 0 .5rem;line-height:1.1}
+    .authors{margin:0;color:var(--muted);font-size:clamp(1rem,2.5vw,1.1rem)}
+    .affiliations-inline{margin:.5rem 0 1.5rem;color:var(--muted);font-size:0.95rem;line-height:1.4}
+    sup{font-size:0.75em;vertical-align:super}
     .links-panel{background:var(--panel);border:1px solid rgba(148,163,184,.18);border-radius:1rem;padding:1rem;margin:1rem 0;display:flex;flex-wrap:wrap;gap:1rem}
     .links-panel a{color:var(--brand);font-weight:600;text-decoration:none;border:1px solid var(--brand);padding:.5rem 1rem;border-radius:.6rem;transition:background .2s,color .2s}
     .links-panel a:hover{background:var(--brand);color:white}
     .panel{background:var(--panel);border:1px solid rgba(148,163,184,.18);border-radius:1rem;padding:1.25rem;margin:1rem 0}
     h2{font-size:1.25rem;margin:.25rem 0 0.75rem}
     p{margin:.5rem 0}
-    .video{position:relative;width:100%;aspect-ratio:16/9;border-radius:1rem;overflow:hidden;border:1px solid rgba(148,163,184,.18);}
-    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .video{position:relative;width:100%;aspect-ratio:16/9;border-radius:1rem;overflow:hidden;border:1px solid rgba(148,163,184,.18)}
+    video{width:100%;height:auto;border-radius:1rem;display:block}
     img{max-width:100%;display:block;border-radius:1rem;border:1px solid rgba(148,163,184,.18)}
     figcaption{color:var(--muted);font-size:.95rem;margin-top:.5rem}
     footer{color:var(--muted);text-align:center;padding:2rem 0}
@@ -38,17 +40,27 @@
   <main class="container">
     <header>
       <h1 class="title">Agile and cooperative aerial manipulation of a cable-suspended load</h1>
-      <p class="authors">Sihao Sun, Xuerui Wang, Dario Sanalitro, Antonio Franchi, Marco Tognon, Javier Alonso-Mora</p>
+      <p class="authors">
+        Sihao Sun<sup>1</sup>, Xuerui Wang<sup>1</sup>, Dario Sanalitro<sup>2</sup>, Antonio Franchi<sup>3</sup>, Marco Tognon<sup>4</sup>, Javier Alonso-Mora<sup>1</sup>
+      </p>
+      <p class="affiliations-inline">
+        <sup>1</sup> Delft University of Technology &nbsp;&nbsp; <sup>2</sup> Sorbonne University &nbsp;&nbsp; <sup>3</sup> University of Twente &nbsp;&nbsp; <sup>4</sup> INRIA
+      </p>
       <div class="links-panel">
-        <a href="https://www.science.org/stoken/author-tokens/ST-3015/full" target="_blank" rel="noopener noreferrer">Paper PDF</a>
-        <a href="#" title="Coming soon">Code (Coming Soon)</a>
+        <a href="https://www.science.org/content/page/preparing-manuscripts-using-latex" target="_blank" rel="noopener noreferrer">Paper PDF</a>
+        <a href="https://doi.org/10.5061/dryad.n2z34tn6w" target="_blank" rel="noopener noreferrer">Data</a>
+        <a href="https://youtu.be/FBWN-rTK1YU" target="_blank" rel="noopener noreferrer">Video</a>
+        <a href="assets/scirobotics.adu8015_sm.pdf" target="_blank" rel="noopener noreferrer">Supplementary Material</a>
       </div>
     </header>
 
     <section id="video" class="panel">
       <h2>Video</h2>
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/FBWN-rTK1YU" title="Project video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <video controls>
+          <source src="assets/video_camls_agile.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </section>
 
@@ -60,16 +72,22 @@
     <section id="methods" class="panel">
       <h2>Methods</h2>
       <figure>
-        <img src="assets/methods.png" alt="Overview of the online kinodynamic motion planner, estimator, and quadrotor INDI controllers for cooperative cable-suspended manipulation." />
+        <img src="methods.png" alt="Overview of the online kinodynamic motion planner, estimator, and quadrotor INDI controllers for cooperative cable-suspended manipulation." />
         <figcaption>System overview of the proposed trajectory-based framework for agile cooperative aerial manipulation.</figcaption>
       </figure>
+      <div class="video">
+        <video controls>
+          <source src="assets/methods_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p>Method overview. Our framework includes a kinodynamic motion planner solving an OCP online at 10 Hz to generate receding-horizon reference trajectories of quadrotors given load reference pose and predefined no-fly zones. The OCP used the whole-body dynamics of the system, including the quadrotor model and the load-cable model. The load’s pose, twist, and cable directions were obtained from an eKF-based estimator. The remaining elements in the initial state of the OCP, namely, the derivatives of the cable directions and tensions, were obtained by resampling the previously generated predicted trajectory to avoid oscillatory motion of the quadrotor when a new reference arrives. The load state estimator fused the load-cable model and the quadrotors’ position, velocity, and iMU measurements to obtain estimates of load pose, twist, and cable directions. It was initialized through an iterative Kabsch-Umeyama algorithm given the initial quadrotor states. Onboard each quadrotor, a time-based sampler sampled the received receding-horizon reference trajectory using the current time stamp to generate a single reference point, which was tracked by a trajectory-tracking controller based on the inDi technique that regards the cable tensions as external disturbances and compensates for them using the iMU measurements.</p>
     </section>
 
     <footer>
-      <small>© <span id="year"></span> Authors. All rights reserved.</small>
+      <small>© <span id="year"></span> Sihao Sun. All rights reserved.</small>
     </footer>
   </main>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
