@@ -3,197 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My GitHub Pages Site</title>
-  <meta name="description" content="A clean, responsive starter site you can host on GitHub Pages." />
-  <meta property="og:title" content="My GitHub Pages Site" />
-  <meta property="og:description" content="A clean, responsive starter site you can host on GitHub Pages." />
-  <meta property="og:type" content="website" />
+  <title>Agile and cooperative aerial manipulation of a cable-suspended load</title>
+  <meta name="description" content="Paper page: Agile and cooperative aerial manipulation of a cable-suspended load" />
   <meta name="theme-color" content="#0ea5e9" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌐</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📄</text></svg>">
   <style>
     :root{
-      --bg: #0b1220;
-      --panel:#0f172a;
-      --text:#e2e8f0;
-      --muted:#94a3b8;
-      --brand:#0ea5e9;
-      --accent:#22c55e;
-      --ring: rgba(14,165,233,.35)
+      --bg: #ffffff;       /* light background */
+      --panel:#f8fafc;     /* card color */
+      --text:#0f172a;      /* main text */
+      --muted:#475569;     /* secondary text */
+      --brand:#0ea5e9;     /* accent */
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;background:var(--bg);color:var(--text)}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin-inline:auto;padding:0 1rem}
-    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:color-mix(in srgb, var(--panel) 80%, transparent);border-bottom:1px solid rgba(148,163,184,.15);z-index:50}
-    nav{display:flex;align-items:center;gap:.75rem;justify-content:space-between;padding:.75rem 0}
-    .brand{display:flex;align-items:center;gap:.5rem;font-weight:700}
-    .brand .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 0 24px var(--ring)}
-    .menu{display:flex;gap:1rem}
-    .menu a{padding:.5rem .75rem;border-radius:.65rem;color:var(--muted)}
-    .menu a:hover{color:var(--text);background:rgba(148,163,184,.12)}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--brand),#2563eb);color:#fff;border:0;padding:.75rem 1rem;border-radius:.8rem;box-shadow:0 6px 20px rgba(14,165,233,.25);cursor:pointer}
-    .btn:focus{outline:2px solid var(--ring)}
-
-    .hero{padding:5rem 0 3rem;background:radial-gradient(1200px 600px at 50% -10%, rgba(14,165,233,.15), transparent);text-align:center}
-    .hero h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.25rem 0}
-    .hero p{color:var(--muted);max-width:720px;margin:0.5rem auto 1.25rem}
-    .hero .cta{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
-
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
-    .card{grid-column:span 12;background:var(--panel);border:1px solid rgba(148,163,184,.15);border-radius:1rem;padding:1rem}
-    @media(min-width:720px){.card{grid-column:span 4}}
-    .card h3{margin:.25rem 0 .5rem}
-    .card p{color:var(--muted)}
-
-    section{padding:3rem 0}
-    .kicker{display:inline-flex;gap:.5rem;align-items:center;color:var(--brand);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
-    .kicker .line{width:24px;height:2px;background:var(--brand);border-radius:999px}
-
-    .panel{background:var(--panel);border:1px solid rgba(148,163,184,.15);border-radius:1rem;padding:1.25rem}
-    .two-col{display:grid;gap:1rem}
-    @media(min-width:840px){.two-col{grid-template-columns:1.1fr .9fr}}
-
-    footer{padding:2rem 0;border-top:1px solid rgba(148,163,184,.15);color:var(--muted)}
-
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .container{max-width:900px;margin-inline:auto;padding:2rem 1rem}
+    .title{font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.1;margin:0 0 .5rem;font-weight:800}
+    .authors{margin:0 0 1.5rem;color:var(--muted);font-size:clamp(1rem,2.5vw,1.1rem)}
+    .links-panel{background:var(--panel);border:1px solid rgba(148,163,184,.18);border-radius:1rem;padding:1rem;margin:1rem 0;display:flex;flex-wrap:wrap;gap:1rem}
+    .links-panel a{color:var(--brand);font-weight:600;text-decoration:none;border:1px solid var(--brand);padding:.5rem 1rem;border-radius:.6rem;transition:background .2s,color .2s}
+    .links-panel a:hover{background:var(--brand);color:white}
+    .panel{background:var(--panel);border:1px solid rgba(148,163,184,.18);border-radius:1rem;padding:1.25rem;margin:1rem 0}
+    h2{font-size:1.25rem;margin:.25rem 0 0.75rem}
+    p{margin:.5rem 0}
+    .video{position:relative;width:100%;aspect-ratio:16/9;border-radius:1rem;overflow:hidden;border:1px solid rgba(148,163,184,.18);}
+    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    img{max-width:100%;display:block;border-radius:1rem;border:1px solid rgba(148,163,184,.18)}
+    figcaption{color:var(--muted);font-size:.95rem;margin-top:.5rem}
+    footer{color:var(--muted);text-align:center;padding:2rem 0}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav aria-label="Primary">
-        <a class="brand" href="#home"><span class="dot" aria-hidden="true"></span>MySite</a>
-        <div class="menu">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-          <button class="btn" id="themeToggle" aria-pressed="false" title="Toggle theme">
-            <span aria-hidden="true">🌓</span><span>Theme</span>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <main class="container">
+    <header>
+      <h1 class="title">Agile and cooperative aerial manipulation of a cable-suspended load</h1>
+      <p class="authors">Sihao Sun, Xuerui Wang, Dario Sanalitro, Antonio Franchi, Marco Tognon, Javier Alonso-Mora</p>
+      <div class="links-panel">
+        <a href="https://www.science.org/stoken/author-tokens/ST-3015/full" target="_blank" rel="noopener noreferrer">Paper PDF</a>
+        <a href="#" title="Coming soon">Code (Coming Soon)</a>
+      </div>
+    </header>
 
-  <main id="home">
-    <section class="hero container">
-      <span class="kicker"><span class="line"></span> Hello, world</span>
-      <h1>Deploy a beautiful website on <em>GitHub Pages</em> in minutes</h1>
-      <p>
-        This single-file template is fast, accessible, and easy to customize.
-        Edit the text, change the colors, add your projects — then push to GitHub and turn on Pages.
-      </p>
-      <div class="cta">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn" href="#contact" style="background:linear-gradient(135deg,var(--accent),#16a34a)">Get in touch</a>
+    <section id="video" class="panel">
+      <h2>Video</h2>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/FBWN-rTK1YU" title="Project video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </section>
 
-    <section id="about" class="container">
-      <div class="two-col">
-        <div class="panel">
-          <h2>About</h2>
-          <p>Write a short bio here. Who are you? What do you do? What do you care about? Keep it friendly and to the point.</p>
-          <ul>
-            <li>⚡ Lightning-fast static site</li>
-            <li>♿ Accessible by default (semantic HTML, focus styles)</li>
-            <li>🧩 No build step — just HTML, CSS and a sprinkle of JS</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h2>Quick Start</h2>
-          <ol>
-            <li>Create a new GitHub repository named <strong>username.github.io</strong>.</li>
-            <li>Add this <code>index.html</code> file and commit.</li>
-            <li>Go to <em>Settings → Pages</em> and ensure the <em>main</em> branch is selected.</li>
-            <li>Your site will be available at <code>https://username.github.io/</code>.</li>
-          </ol>
-        </div>
-      </div>
+    <section id="abstract" class="panel">
+      <h2>Abstract</h2>
+      <p>Quadrotors can carry slung loads to hard-to-reach locations at high speed. Since a single quadrotor has limited payload capacities, using a team of quadrotors to collaboratively manipulate a heavy object is a scalable and promising solution. However, existing control algorithms for multi-lifting systems only enable low-speed and low-acceleration operations due to the complex dynamic coupling between quadrotors and the load, limiting their use in time-critical missions such as search and rescue. In this work, we present a solution to significantly enhance the agility of cable-suspended multi-lifting systems. Unlike traditional cascaded solutions, we introduce a trajectory-based framework that solves the whole-body kinodynamic motion planning problem online, accounting for the dynamic coupling effects and constraints between the quadrotors and the load. The planned trajectory is provided to the quadrotors as a reference in a receding-horizon fashion and is tracked by an onboard controller that observes and compensates for the cable tension. Real-world experiments demonstrate that our framework can achieve at least eight times greater acceleration than state-of-the-art methods to follow agile trajectories. Our method can even perform complex maneuvers such as flying through narrow passages at high speed. Additionally, it exhibits high robustness against load uncertainties and does not require adding any sensors to the load, demonstrating strong practicality.</p>
     </section>
 
-    <section id="projects" class="container">
-      <span class="kicker"><span class="line"></span> Selected Work</span>
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>A short description of what this project does and why it matters. Link out to a repo or live demo.</p>
-          <p><a class="btn" href="#">View repo</a></p>
-        </article>
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>Another quick blurb. Keep each card concise. You can add images inside cards if you like.</p>
-          <p><a class="btn" href="#">Live demo</a></p>
-        </article>
-        <article class="card">
-          <h3>Project Three</h3>
-          <p>What tech did you use? What problem did you solve? Who is it for?</p>
-          <p><a class="btn" href="#">Read more</a></p>
-        </article>
-      </div>
+    <section id="methods" class="panel">
+      <h2>Methods</h2>
+      <figure>
+        <img src="assets/methods.png" alt="Overview of the online kinodynamic motion planner, estimator, and quadrotor INDI controllers for cooperative cable-suspended manipulation." />
+        <figcaption>System overview of the proposed trajectory-based framework for agile cooperative aerial manipulation.</figcaption>
+      </figure>
     </section>
 
-    <section id="contact" class="container">
-      <span class="kicker"><span class="line"></span> Say hi</span>
-      <h2>Contact</h2>
-      <div class="panel">
-        <form name="contact" method="POST" data-netlify="true" onsubmit="event.preventDefault(); alert('Thanks! Replace this with your form handling.');">
-          <input type="hidden" name="form-name" value="contact" />
-          <label class="sr-only" for="name">Name</label>
-          <input id="name" name="name" placeholder="Your name" required style="width:100%;padding:.75rem;border-radius:.65rem;border:1px solid rgba(148,163,184,.35);background:#0b1220;color:var(--text);margin:.5rem 0" />
-
-          <label class="sr-only" for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" required style="width:100%;padding:.75rem;border-radius:.65rem;border:1px solid rgba(148,163,184,.35);background:#0b1220;color:var(--text);margin:.5rem 0" />
-
-          <label class="sr-only" for="msg">Message</label>
-          <textarea id="msg" name="message" rows="5" placeholder="Tell me about your project..." style="width:100%;padding:.75rem;border-radius:.65rem;border:1px solid rgba(148,163,184,.35);background:#0b1220;color:var(--text);margin:.5rem 0"></textarea>
-
-          <button class="btn" type="submit">Send</button>
-        </form>
-      </div>
-    </section>
+    <footer>
+      <small>© <span id="year"></span> Authors. All rights reserved.</small>
+    </footer>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Your Name. Built with ♥ and GitHub Pages.</p>
-    </div>
-  </footer>
-
   <script>
-    // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Simple theme toggle with localStorage
-    const toggle = document.getElementById('themeToggle');
-    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    const saved = localStorage.getItem('theme');
-
-    function setTheme(mode){
-      if(mode==='light'){
-        document.documentElement.style.setProperty('--bg','#f8fafc');
-        document.documentElement.style.setProperty('--panel','#ffffff');
-        document.documentElement.style.setProperty('--text','#0f172a');
-        document.documentElement.style.setProperty('--muted','#475569');
-      } else {
-        document.documentElement.style.setProperty('--bg','#0b1220');
-        document.documentElement.style.setProperty('--panel','#0f172a');
-        document.documentElement.style.setProperty('--text','#e2e8f0');
-        document.documentElement.style.setProperty('--muted','#94a3b8');
-      }
-    }
-
-    setTheme(saved || (prefersLight ? 'light' : 'dark'));
-
-    toggle.addEventListener('click', () => {
-      const isLight = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()==='#f8fafc';
-      const next = isLight ? 'dark' : 'light';
-      setTheme(next);
-      localStorage.setItem('theme', next);
-      toggle.setAttribute('aria-pressed', String(next==='light'));
-    });
   </script>
 </body>
 </html>
