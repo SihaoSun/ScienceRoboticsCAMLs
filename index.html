@@ -21,6 +21,8 @@
     .container{max-width:900px;margin-inline:auto;padding:2rem 1rem}
     .title{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:800;margin:0 0 .5rem;line-height:1.1}
     .authors{margin:0;color:var(--muted);font-size:clamp(1rem,2.5vw,1.1rem)}
+    .authors a{color:var(--brand);text-decoration:none;font-weight:600}
+    .authors a:hover{text-decoration:underline}
     .affiliations-inline{margin:.5rem 0 1.5rem;color:var(--muted);font-size:0.95rem;line-height:1.4}
     sup{font-size:0.75em;vertical-align:super}
     .links-panel{background:var(--panel);border:1px solid rgba(148,163,184,.18);border-radius:1rem;padding:1rem;margin:1rem 0;display:flex;flex-wrap:wrap;gap:1rem}
@@ -43,7 +45,7 @@
     <header>
       <h1 class="title">Agile and cooperative aerial manipulation of a cable-suspended load</h1>
       <p class="authors">
-        Sihao Sun<sup>1</sup>, Xuerui Wang<sup>1</sup>, Dario Sanalitro<sup>2</sup>, Antonio Franchi<sup>3</sup>, Marco Tognon<sup>4</sup>, Javier Alonso-Mora<sup>1</sup>
+        <a href="https://sihaosun.github.io/" target="_blank" rel="noopener noreferrer">Sihao Sun</a><sup>1</sup>, Xuerui Wang<sup>1</sup>, Dario Sanalitro<sup>2</sup>, Antonio Franchi<sup>3</sup>, Marco Tognon<sup>4</sup>, Javier Alonso-Mora<sup>1</sup>
       </p>
       <p class="affiliations-inline">
         <sup>1</sup> Delft University of Technology &nbsp;&nbsp; <sup>2</sup> Sorbonne University &nbsp;&nbsp; <sup>3</sup> University of Twente &nbsp;&nbsp; <sup>4</sup> INRIA
@@ -57,7 +59,6 @@
     </header>
 
     <section id="video" class="panel">
-      <h2>Video</h2>
       <div class="video">
         <video controls autoplay loop muted>
           <source src="assets/video_camls_agile.mp4" type="video/mp4">
@@ -83,7 +84,7 @@
           Your browser does not support the video tag.
         </video>
       </div>
-      <p>Method overview. Our framework includes a kinodynamic motion planner solving an OCP online at 10 Hz to generate receding-horizon reference trajectories of quadrotors given load reference pose and predefined no-fly zones. The OCP used the whole-body dynamics of the system, including the quadrotor model and the load-cable model. The load’s pose, twist, and cable directions were obtained from an eKF-based estimator. The remaining elements in the initial state of the OCP, namely, the derivatives of the cable directions and tensions, were obtained by resampling the previously generated predicted trajectory to avoid oscillatory motion of the quadrotor when a new reference arrives. The load state estimator fused the load-cable model and the quadrotors’ position, velocity, and iMU measurements to obtain estimates of load pose, twist, and cable directions. It was initialized through an iterative Kabsch-Umeyama algorithm given the initial quadrotor states. Onboard each quadrotor, a time-based sampler sampled the received receding-horizon reference trajectory using the current time stamp to generate a single reference point, which was tracked by a trajectory-tracking controller based on the inDi technique that regards the cable tensions as external disturbances and compensates for them using the iMU measurements.</p>
+      <p>Our framework includes a kinodynamic motion planner solving an optimal control problem (OCP) online at 10 Hz to generate receding-horizon reference trajectories of quadrotors given load reference pose and predefined no-fly zones. The OCP used the whole-body dynamics of the system, including the quadrotor model and the load-cable model. The load’s pose, twist, and cable directions were obtained from an EKF-based estimator. The remaining elements in the initial state of the OCP, namely, the derivatives of the cable directions and tensions, were obtained by resampling the previously generated predicted trajectory to avoid oscillatory motion of the quadrotor when a new reference arrives. The load state estimator fused the load-cable model and the quadrotors’ position, velocity, and IMU measurements to obtain estimates of load pose, twist, and cable directions. It was initialized through an iterative Kabsch-Umeyama algorithm given the initial quadrotor states. Onboard each quadrotor, a time-based sampler sampled the received receding-horizon reference trajectory using the current time stamp to generate a single reference point, which was tracked by a trajectory-tracking controller based on the incremental nonlinear dynamic inversion (INDI) technique that regards the cable tensions as external disturbances and compensates for them using the IMU measurements.</p>
     </section>
 
     <footer>
