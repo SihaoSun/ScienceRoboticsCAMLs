@@ -74,7 +74,7 @@
     </section>
 
     <section id="abstract" class="panel">
-      <h2>Abstract</h2>
+      <h2>Introduction</h2>
       <p>Quadrotors can carry slung loads to hard-to-reach locations at high speed. Since a single quadrotor has limited payload capacities, using a team of quadrotors to collaboratively manipulate a heavy object is a scalable and promising solution. However, existing control algorithms for multi-lifting systems only enable low-speed and low-acceleration operations due to the complex dynamic coupling between quadrotors and the load, limiting their use in time-critical missions such as search and rescue. In this work, we present a solution to significantly enhance the agility of cable-suspended multi-lifting systems. Unlike traditional cascaded solutions, we introduce a trajectory-based framework that solves the whole-body kinodynamic motion planning problem online, accounting for the dynamic coupling effects and constraints between the quadrotors and the load. The planned trajectory is provided to the quadrotors as a reference in a receding-horizon fashion and is tracked by an onboard controller that observes and compensates for the cable tension. Real-world experiments demonstrate that our framework can achieve at least eight times greater acceleration than state-of-the-art methods to follow agile trajectories. Our method can even perform complex maneuvers such as flying through narrow passages at high speed. Additionally, it exhibits high robustness against load uncertainties and does not require adding any sensors to the load, demonstrating strong practicality.</p>
     </section>
 
@@ -92,6 +92,26 @@
       </div>
       <p>Our framework includes a kinodynamic motion planner solving an optimal control problem (OCP) online at 10 Hz to generate receding-horizon reference trajectories of quadrotors given load reference pose and predefined no-fly zones. The OCP used the whole-body dynamics of the system, including the quadrotor model and the load-cable model. The load’s pose, twist, and cable directions were obtained from an EKF-based estimator. The remaining elements in the initial state of the OCP, namely, the derivatives of the cable directions and tensions, were obtained by resampling the previously generated predicted trajectory to avoid oscillatory motion of the quadrotor when a new reference arrives. The load state estimator fused the load-cable model and the quadrotors’ position, velocity, and IMU measurements to obtain estimates of load pose, twist, and cable directions. It was initialized through an iterative Kabsch-Umeyama algorithm given the initial quadrotor states. Onboard each quadrotor, a time-based sampler sampled the received receding-horizon reference trajectory using the current time stamp to generate a single reference point, which was tracked by a trajectory-tracking controller based on the incremental nonlinear dynamic inversion (INDI) technique that regards the cable tensions as external disturbances and compensates for them using the IMU measurements.</p>
     </section>
+
+  <section id="Potential for Construction?" class="panel">
+    <h2>Applications: potential for construction?</h2>
+
+    <div class="video">
+      <video controls autoplay loop muted>
+        <source src="assets/demo_4_drones_space_frame.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <p>
+      We use four quadrotors (each weighing 0.6 kg) to cooperatively control the
+      orientation and position of a large-span space frame (2.6 m × 0.5 m × 1.0 m)
+      with a total mass of 3.0 kg. The frame is made of plastic—originally a DIY
+      fort toy for kids—but it serves as a lightweight stand-in for structural
+      assemblies. This demo may offer a glimpse of what’s possible for CAMLs in
+      the construction domain.
+    </p>
+  </section>
 
     <footer>
       <small>© 2025 Sihao Sun. All rights reserved.</small>
